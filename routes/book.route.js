@@ -26,7 +26,7 @@ router.put('/:id', (req, res) => {
     const id = req.params.id
     const { book } = req.body
     let index = books.findIndex(b => b.id == id)
-    books[index].id = book.id
+    // books[index].id = book.id
     books[index].name = book.name
     books[index].price = book.price
     res.json(book)
