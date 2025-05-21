@@ -5,6 +5,12 @@ import {addDate,printDate} from './middlewares/Date.middleware.js';
 import cors from 'cors';
 import morgan from 'morgan';
 import { errorHandler, notFound } from './middlewares/errorHandling.middleware.js';
+import { connectDB } from './config/db.js';
+import { config } from 'dotenv';
+
+config()
+
+connectDB()
 
 const app = express();
 
