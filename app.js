@@ -7,11 +7,10 @@ import { errorHandler, notFound } from './middlewares/errorHandling.middleware.j
 import {addDate,printDate} from './middlewares/Date.middleware.js';
 import booksRoute from './routes/book.route.js';
 import userRoute from './routes/user.route.js';
+import { connectDB } from './config/db.js';
 
 config()
-console.log('🔍 DB_URL from .env:', process.env.DB_URI);
 
-import { connectDB } from './config/db.js';
 connectDB()
 
 const app = express();
