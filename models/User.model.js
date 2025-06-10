@@ -18,6 +18,7 @@ export const generateToken = (user) => {
     return token
 }
 
+//פונקציה שמתבצעת לפני שמירה לממסד נתונים
 userSchema.pre('save', async function () {
 
     const salt = await bcrypt.genSalt(10);
